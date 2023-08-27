@@ -1,6 +1,6 @@
 import { criaQuadrado } from "./control/quadrado.js";
 import { criaCirculo } from "./control/circulo.js";
-import { moverBloco } from "./design/mover.js"
+import { moverBloco } from "./design/mover.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 
 // Folha

@@ -6,7 +6,7 @@ export const criaCirculo = (x, y) =>{
 
     let width = 75;
     let height = 75;
-    let color = "white";
+    let color = "black";
 
     numCirculo++;
 
@@ -23,11 +23,15 @@ export const criaCirculo = (x, y) =>{
         border-radius: 500px;
 
         cursor: move;
+        color: red;
+        font-weight: bold;
 
         box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
         background-color: ${color};
         `
     ;
+
+    circulo.textContent = "minha bola";
     
     canvas.appendChild(circulo);
 }
