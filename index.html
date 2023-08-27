@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gerador Mapa Mental</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="w-32 min-h-screen p-4 z-50 absolute bg-gray-300" id="control">
+                <div class="w-16 h-16 mx-4 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
+                <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <div class="w-full px-4 py-2 z-30 absolute bg-gray-300">
+                    <div class="pl-32">
+                        <h2>Ferramentas</h2>
+                        <div class="flex flex-wrap bg-red-200">
+                            <h2 class="pr-4">Ferramentas</h2>
+                            <h2 class="pr-4">Ferramentas</h2>
+                            <h2 class="pr-4">Ferramentas</h2>
+                            <h2 class="pr-4">Ferramentas</h2>
+                            <h2 class="pr-4">Ferramentas</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ml-32 relative bg-green-100">
+                <div class="min-h-screen" id="map"></div>
+            </section>
+        </article>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
