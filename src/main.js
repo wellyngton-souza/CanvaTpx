@@ -1,5 +1,7 @@
 import { criaQuadrado } from "./control/quadrado.js";
 import { criaCirculo } from "./control/circulo.js";
+import { criatriangulo } from "./control/triagulo.js";
+import { exportarJson } from "./import & export/export.js";
 import { moverBloco } from "./design/mover.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 
@@ -35,6 +37,11 @@ map.addEventListener("click",(e)=>{
             criaCirculo(e.clientX, e.clientY);
         }
         item = null;
+    } else if(item === "triangulo"){
+        if(e.target == map){
+            criatriangulo(e.clientX, e.clientY);
+        }
+        item = null;
     }
 
     fechaPainel(e);
@@ -59,6 +66,8 @@ control.addEventListener("click",(e)=>{
         item = "quadrado";
     } else if(e.target.id === "circulo"){
         item = "circulo";
+    } else if(e.target.id === "triangulo"){
+        item = "triangulo";
     }
     
     document.body.style.cursor = "crosshair";
@@ -68,3 +77,5 @@ control.addEventListener("click",(e)=>{
 });
 
 moverBloco(arrastando, segurando, control, map);
+
+document.getElementById("bdjson").addEventListener("click", exportarJson);

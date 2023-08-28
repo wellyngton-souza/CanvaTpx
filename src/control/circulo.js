@@ -1,3 +1,5 @@
+import { dados } from "../data/dados.js";
+
 let numCirculo = 0;
 
 export const criaCirculo = (x, y) =>{
@@ -6,7 +8,7 @@ export const criaCirculo = (x, y) =>{
 
     let width = 75;
     let height = 75;
-    let color = "black";
+    let color = "orange";
 
     numCirculo++;
 
@@ -23,15 +25,20 @@ export const criaCirculo = (x, y) =>{
         border-radius: 500px;
 
         cursor: move;
-        color: red;
+        color: white;
         font-weight: bold;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
         background-color: ${color};
         `
     ;
-
-    circulo.textContent = "minha bola";
     
     canvas.appendChild(circulo);
+    dados.circulo.push(
+        ["C" + numCirculo, x - 128 + "px", y + "px"]
+    );
 }
