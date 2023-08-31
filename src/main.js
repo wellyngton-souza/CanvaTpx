@@ -3,6 +3,7 @@ import { criaCirculo } from "./control/circulo.js";
 import { criatriangulo } from "./control/triagulo.js";
 import { exportarJson } from "./import & export/export.js";
 import { moverBloco } from "./design/mover.js";
+import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 
 // Folha
@@ -78,4 +79,5 @@ control.addEventListener("click",(e)=>{
 
 moverBloco(arrastando, segurando, control, map);
 
+document.getElementById("apagaTudo").addEventListener("click", apagarTudo);
 document.getElementById("bdjson").addEventListener("click", exportarJson);

@@ -6,12 +6,11 @@ let numTriangulo = 0;
 
 let canvas = document.getElementById("map");
 
-export const ImportCirculo = (x, y) =>{
+export const ImportCirculo = (x, y, color) =>{
     let circulo = document.createElement('div');
 
     let width = 75;
     let height = 75;
-    let color = "orange";
 
     numCirculo++;
 
@@ -42,7 +41,7 @@ export const ImportCirculo = (x, y) =>{
     
     canvas.appendChild(circulo);
     dados.circulo.push(
-        ["C" + numCirculo, x - 128 + "px", y + "px"]
+        ["C" + numCirculo, x - 128 + "px", y + "px", color, width, height]
     );
 }
 
@@ -50,7 +49,7 @@ export const ImportCirculo = (x, y) =>{
 /////////////////////////////////////////
 /////////////////////////////////////////
 
-export const ImportQuadrado = (x, y) =>{
+export const ImportQuadrado = (x, y, color) =>{
     let quadrado = document.createElement('div');
 
     let textBox = document.createElement('textarea');
@@ -63,7 +62,6 @@ export const ImportQuadrado = (x, y) =>{
 
     let width = 200;
     let height = 75;
-    let color = "white";
 
     numQuadrado++;
 
@@ -79,7 +77,7 @@ export const ImportQuadrado = (x, y) =>{
 
         cursor: move;
         padding: 10px;
-        border-top: 4px solid orange;
+        border-top: 4px solid ${color};
 
         box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
         background-color: ${color};
@@ -89,7 +87,7 @@ export const ImportQuadrado = (x, y) =>{
     quadrado.appendChild(textBox);
     canvas.appendChild(quadrado);
     dados.quadrado.push(
-        ["Q" + numQuadrado, x - 128 + "px", y + "px"]
+        ["Q" + numQuadrado, x - 128 + "px", y + "px", color, width, height]
     );
 }
 
@@ -97,12 +95,15 @@ export const ImportQuadrado = (x, y) =>{
 /////////////////////////////////////////
 /////////////////////////////////////////
 
-export const Importtriangulo = (x, y) =>{
+export const Importtriangulo = (x, y, color) =>{
     let triangulo = document.createElement('div');
 
     numTriangulo++;
 
     triangulo.id = "T" + numTriangulo;
+
+    let width = 75;
+    let height = 75;
 
     triangulo.style.cssText = `
         position: absolute;
@@ -113,12 +114,12 @@ export const Importtriangulo = (x, y) =>{
 
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 100px solid orange;
+        border-bottom: 100px solid ${color};
         `
     ;
 
     canvas.appendChild(triangulo);
     dados.triangulo.push(
-        ["T" + numTriangulo, x - 128 + "px", y + "px"]
+        ["T" + numTriangulo, x - 128 + "px", y + "px", color, width, height]
     );
 }
