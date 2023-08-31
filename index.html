@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Gerador Mapa Mental</title>
+    <title>Sketch</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="w-32 min-h-screen p-4 pt-8 z-50 absolute bg-gray-300" id="control">
-                <div class="w-16 h-16 mx-4 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
+            <div class="w-32 min-h-screen p-4 pt-8 z-50 shadow-md absolute" id="control">
+                <div class="w-16 h-16 mx-4 mt-16 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
                 <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
                 <div class="flex justify-center">
                     <div id="triangulo"></div>
@@ -22,18 +22,18 @@
     <main>
         <article>
             <section>
-                <div class="w-full px-4 py-2 z-30 absolute bg-gray-300">
+                <div class="w-full px-4 py-2 z-30 absolute shadow-md bg-white">
                     <div class="pl-32">
-                        <h2>Ferramentas</h2>
-                        <div class="flex flex-wrap bg-red-200">
+                        <h2 class="text-xl">Sketch</h2>
+                        <div class="flex flex-wrap">
                             <h2 class="pr-4">Ferramentas</h2>
-                            <button class="px-4 bg-green-200" onclick="apagarTudo()">Apagar Tudo</button>
-                            <button class="px-4 bg-green-200" onclick="capturaImage()">Salvar Imagem</button>
+                            <button class="px-4 bg-green-200 hover:bg-green-400" onclick="apagarTudo()">Apagar Tudo</button>
+                            <button class="px-4 bg-green-200 hover:bg-green-400" onclick="capturaImage()">Salvar Imagem</button>
                             <label id="myfile">
-                                <p class="px-4 bg-green-200 cursor-pointer">importar</p>
+                                <p class="px-4 bg-green-200 hover:bg-green-400 cursor-pointer">importar</p>
                                 <input type="file" id="meujson" class="hidden">
                             </label>
-                            <button class="px-4 bg-green-200" id="bdjson">Baixar em Json</button>
+                            <button class="px-4 bg-green-200 hover:bg-green-400" id="bdjson">Baixar em Json</button>
                         </div>
                     </div>
                 </div>
