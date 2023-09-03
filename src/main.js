@@ -5,6 +5,7 @@ import { exportarJson } from "./import & export/export.js";
 import { moverBloco } from "./design/mover.js";
 import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
+import { capturaImage } from "./images/captura.js";
 
 // Folha
 let map = document.getElementById("map");
@@ -81,3 +82,4 @@ moverBloco(arrastando, segurando, control, map);
 
 document.getElementById("apagaTudo").addEventListener("click", apagarTudo);
 document.getElementById("bdjson").addEventListener("click", exportarJson);
+document.getElementById("salvaimagem").addEventListener("click", capturaImage);
