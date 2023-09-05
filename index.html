@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sketch</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="w-32 min-h-screen p-4 pt-8 z-50 shadow-md absolute" id="control">
-                <div class="w-16 h-16 mx-4 mt-16 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
-                <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
-                <div class="flex justify-center">
-                    <div id="triangulo"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+<body class="overflow-hidden">
     <main>
         <article>
+            <section>
+                <div class="min-h-screen flex items-center justify-center bg-white">
+                    <div>
+                        <div class="flex justify-center">
+                            <img class="w-64" src="./assets/S.png" alt="Sketch">
+                        </div>
+                        <p>Onde suas ideias ficam anotadas</p>
+                        <a href="#map">
+                            <button class="py-2 px-32 my-2 rounded-lg transition-color border-4 border-black hover:bg-green-200">Entrar</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div class="w-full px-4 py-2 z-30 absolute shadow-md bg-white">
                     <div class="pl-32">
@@ -29,17 +31,33 @@
                             <h2 class="pr-4">Ferramentas</h2>
                             <button class="px-4 bg-green-200 hover:bg-green-400" id="apagaTudo">Apagar Tudo</button>
                             <button class="px-4 bg-green-200 hover:bg-green-400" id="salvaimagem">Salvar Imagem</button>
-                            <label id="myfile">
-                                <p class="px-4 bg-green-200 hover:bg-green-400 cursor-pointer">importar</p>
-                                <input type="file" id="meujson" class="hidden">
-                            </label>
+                            <div>
+                                <label id="myfile">
+                                    <p class="px-4 bg-green-200 hover:bg-green-400 cursor-pointer">importar</p>
+                                </label>
+                                <input class="hidden" type="file" id="meujson">
+                            </div>
                             <button class="px-4 bg-green-200 hover:bg-green-400" id="bdjson">Baixar em Json</button>
                         </div>
                     </div>
-                </div>
+                </div>    
+                <header>
+                    <nav>
+                        <div class="w-16 h-8 absolute z-50 mx-8 my-4 rounded-xl cursor-pointer bg-green-200" id="abrirmenu">
+                            <div class="w-8 h-8 end-0 transition rounded-full absolute bg-black" id="switchcontrol"></div>
+                        </div>
+                        <div class="w-32 min-h-screen p-4 pt-8 z-40 shadow-md absolute" id="control">
+                            <div class="w-16 h-16 mx-4 mt-28 md:mt-16 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
+                            <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
+                            <div class="flex justify-center">
+                                <div id="triangulo"></div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
             </section>
-            <section class="ml-32 relative bg-green-100">
-                <div class="min-h-screen" id="map"></div>
+            <section class="ml-32 relative" id="controlleft">
+                <div class="min-h-screen relative bg-green-200" id="map"></div>
             </section>
         </article>
     </main>

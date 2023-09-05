@@ -6,6 +6,7 @@ import { moverBloco } from "./design/mover.js";
 import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 import { capturaImage } from "./images/captura.js";
+import { abrirmenu } from "./design/hiddenControl.js";
 
 // Folha
 let map = document.getElementById("map");
@@ -29,19 +30,21 @@ let arrastando = false;
 let segurando = null;
 
 map.addEventListener("click",(e)=>{
+    let clickrelative = e.clientY - map.getBoundingClientRect().top;
+
     if(item === "quadrado"){
         if(e.target == map){
-            criaQuadrado(e.clientX, e.clientY);
+            criaQuadrado(e.clientX, clickrelative);
         }
         item = null;
     } else if(item === "circulo"){
         if(e.target == map){
-            criaCirculo(e.clientX, e.clientY);
+            criaCirculo(e.clientX, clickrelative);
         }
         item = null;
     } else if(item === "triangulo"){
         if(e.target == map){
-            criatriangulo(e.clientX, e.clientY);
+            criatriangulo(e.clientX, clickrelative);
         }
         item = null;
     }
@@ -56,7 +59,7 @@ map.addEventListener("click",(e)=>{
 });
 
 map.addEventListener("contextmenu",(e)=>{
-    abrirPainel(e, e.clientX, e.clientY);
+    abrirPainel(e, e.clientX, e.clientY - map.getBoundingClientRect().top);
 });
 
 control.addEventListener("click",(e)=>{
@@ -83,3 +86,4 @@ moverBloco(arrastando, segurando, control, map);
 document.getElementById("apagaTudo").addEventListener("click", apagarTudo);
 document.getElementById("bdjson").addEventListener("click", exportarJson);
 document.getElementById("salvaimagem").addEventListener("click", capturaImage);
+document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
