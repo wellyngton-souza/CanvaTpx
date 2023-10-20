@@ -14,8 +14,8 @@ export const criaPainel = () =>{
     painel.id = "painelMain";
 
     painel.innerHTML = `
-        <div class="my-4 cursor-pointer bg-green-300" id="modifica">Modificar</div>
-        <div class="my-4 cursor-pointer bg-red-300" id="apagar">Apagar</div>
+        <div class="my-4 cursor-pointer px-4 py-2 rounded-lg bg-green-300" id="modifica">Modificar</div>
+        <div class="my-4 cursor-pointer px-4 py-2 rounded-lg bg-red-300" id="apagar">Apagar</div>
     `;
 
     painel.style.display = "none";
@@ -30,14 +30,11 @@ export const abrirPainel = (e, x, y) =>{
         return;
     }
 
-    let width = 100;
     let color = "white";
 
     painel.style.cssText = `
         display: block;
         position: absolute;
-            
-        width: ${width}px;
 
         background-color: ${color};
 
@@ -45,6 +42,7 @@ export const abrirPainel = (e, x, y) =>{
         top: ${y + 50}px;
 
         padding: 0 10px;
+        border-radius: 8px;
 
         z-index: 99;
         

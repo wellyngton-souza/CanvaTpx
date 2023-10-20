@@ -67,18 +67,22 @@ control.addEventListener("click",(e)=>{
         return;
     }
 
+    const elementoSelect = () =>{
+        e.target.classList.toggle("bg-yellow-500");
+        document.body.style.cursor = "crosshair";
+        itemSelect = e.target;
+    }
+
     if(e.target.id === "quadrado"){
         item = "quadrado";
+        elementoSelect();
     } else if(e.target.id === "circulo"){
         item = "circulo";
+        elementoSelect();
     } else if(e.target.id === "triangulo"){
         item = "triangulo";
+        elementoSelect();
     }
-    
-    document.body.style.cursor = "crosshair";
-
-    e.target.classList.toggle("bg-yellow-500");
-    itemSelect = e.target;
 });
 
 moverBloco(arrastando, segurando, control, map);

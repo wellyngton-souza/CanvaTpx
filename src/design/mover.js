@@ -3,13 +3,41 @@ import { dados } from "../data/dados.js";
 let X;
 let Y;
 
-export const moverBloco = ( arrastando, segurando, control, map ) =>{
+const puxarPropriedadesElemento = (e, propriedade, index) =>{
+    for(let i = 0; i < dados.circulo.length; i++){
+        if(e.id === dados.circulo[i][0]){
+            document.getElementById(propriedade + "_properties").innerHTML = dados.circulo[i][index];
+            return;
+        }
+    }
+
+    for(let i = 0; i < dados.quadrado.length; i++){
+        if(e.id === dados.quadrado[i][0]){
+            document.getElementById(propriedade + "_properties").innerHTML = dados.quadrado[i][index];
+            return;
+        }
+    }
+
+    for(let i = 0; i < dados.triangulo.length; i++){
+        if(e.id === dados.triangulo[i][0]){
+            document.getElementById(propriedade + "_properties").innerHTML = dados.triangulo[i][index];
+            return;
+        }
+    }
+}
+
+export const moverBloco = ( arrastando, segurando ) =>{
     document.addEventListener("mousedown", (e)=>{
-        if(e.target === control|| e.target === map || e.target.tagName == "TEXTAREA"){
+        if(e.target.id[0] !== "Q" && e.target.id[0] !== "T" && e.target.id[0] !== "C"){
             return;
         }
 
         arrastando = true;
+
+        document.getElementById("elementoPainel").innerHTML = e.target.id;
+        puxarPropriedadesElemento(e.target, "X", 1);
+        puxarPropriedadesElemento(e.target, "Y", 2);
+        puxarPropriedadesElemento(e.target, "COLOR", 3);
 
         segurando = document.getElementById(e.target.id);
 
