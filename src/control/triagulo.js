@@ -1,7 +1,5 @@
 import { dados } from "../data/dados.js";
 
-let numTriangulo = 0;
-
 document.getElementById("triangulo").style.cssText = `
     cursor: move;
     width: 32px;
@@ -13,6 +11,7 @@ document.getElementById("triangulo").style.cssText = `
 ;
 
 export const criatriangulo = (x, y) =>{
+    let numTriangulo = dados.triangulo.length;
     let canvas = document.getElementById("map");
     let triangulo = document.createElement('div');
     let color = "orange";

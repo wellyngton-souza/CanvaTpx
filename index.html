@@ -8,7 +8,7 @@
     <title>Sketch</title>
 </head>
 <body class="overflow-hidden">
-    <main>
+    <main class="select-none">
         <article>
             <section>
                 <div class="min-h-screen flex items-center justify-center bg-white">
@@ -17,15 +17,18 @@
                             <img class="w-64" src="./assets/S.png" alt="Sketch">
                         </div>
                         <p>Onde suas ideias ficam anotadas</p>
-                        <a href="#map">
+                        <a href="#mapa">
                             <button class="py-2 px-32 my-2 rounded-lg transition-color border-4 border-black hover:bg-green-200">Entrar</button>
                         </a>
                     </div>
                 </div>
             </section>
-            <article class="flex">
-                <section>
-                    <div class="w-full px-4 py-2 z-30 absolute shadow-md bg-white">
+            <article>
+                <div class="min-h-screen flex flex-col" id="mapa">
+                    <div class="w-full px-4 py-2 z-30 shadow-md">
+                        <div class="w-16 h-8 absolute z-50 mx-4 my-2 rounded-xl cursor-pointer bg-green-200" id="abrirmenu">
+                            <div class="w-8 h-8 end-0 transition rounded-full absolute bg-black" id="switchcontrol"></div>
+                        </div>
                         <div class="pl-32">
                             <h2 class="text-xl">Sketch</h2>
                             <div class="flex flex-wrap">
@@ -41,40 +44,39 @@
                                 <button class="px-4 bg-green-200 hover:bg-green-400" id="bdjson">Baixar em Json</button>
                             </div>
                         </div>
-                    </div>    
-                    <header>
-                        <nav>
-                            <div class="w-16 h-8 absolute z-50 mx-8 my-4 rounded-xl cursor-pointer bg-green-200" id="abrirmenu">
-                                <div class="w-8 h-8 end-0 transition rounded-full absolute bg-black" id="switchcontrol"></div>
-                            </div>
-                            <div class="w-32 min-h-screen p-4 pt-8 z-40 flex flex-col shadow-md absolute" id="control">
-                                <div class="grow">
-                                    <div class="w-16 h-16 mx-4 mt-28 md:mt-16 my-8 cursor-pointer bg-orange-400" id="quadrado"></div>
-                                    <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
-                                    <div class="flex justify-center">
-                                        <div id="triangulo"></div>
+                    </div>
+                    <div class="flex grow">
+                        <header >
+                            <nav class="h-full">
+                                <div class="w-32 h-full p-4 z-40 flex flex-col shadow-md" id="control">
+                                    <div class="grow">
+                                        <div class="w-16 h-16 mx-4 mb-8 cursor-pointer bg-orange-400" id="quadrado"></div>
+                                        <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
+                                        <div class="flex justify-center">
+                                            <div id="triangulo"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="bg-green-200">Configurações</button>
                                     </div>
                                 </div>
-                                <div>
-                                    <h2>Configurações</h2>
-                                </div>
+                            </nav>
+                        </header>
+                        <section class="grow relative" id="controlright">
+                            <div class="w-full h-full relative bg-green-200" id="map"></div>
+                        </section>
+                        <div class="w-64 md:w-96 p-8 z-50 border-box flex flex-col">
+                            <div class="grow">
+                                <h2>Painel de Priedades</h2>
+                                <h3 class="my-2 font-bold text-green-500" id="elementoPainel">Elemento Selecionado</h3>
+                                <p id="X_properties">x</p>
+                                <p id="Y_properties">y</p>
+                                <p id="COLOR_properties">color</p>
                             </div>
-                        </nav>
-                    </header>
-                </section>
-                <section class="ml-32 grow relative bg-green-200" id="controlright">
-                    <div class="min-h-screen relative" id="map"></div>
-                </section>
-                <div class="w-96 p-8 z-50 border-box mt-16 flex flex-col bg-white">
-                    <div class="grow">
-                        <h2>Painel de Priedades</h2>
-                        <h3 class="my-2 font-bold text-green-500" id="elementoPainel">Elemento Selecionado</h3>
-                        <p id="X_properties">x</p>
-                        <p id="Y_properties">y</p>
-                        <p id="COLOR_properties">color</p>
+                            <h2 class="text-xl">Dica</h2>
+                            <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
+                        </div>
                     </div>
-                    <h2 class="text-xl">Dica</h2>
-                    <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
                 </div>
             </article>
         </article>

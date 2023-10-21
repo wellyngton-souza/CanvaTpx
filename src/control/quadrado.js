@@ -1,8 +1,7 @@
 import { dados } from "../data/dados.js";
 
-let numQuadrado = 0;
-
 export const criaQuadrado = (x, y) =>{
+    let numQuadrado = dados.quadrado.length;
     let canvas = document.getElementById("map");
     let quadrado = document.createElement('div');
 

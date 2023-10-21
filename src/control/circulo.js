@@ -1,8 +1,7 @@
 import { dados } from "../data/dados.js";
 
-let numCirculo = 0;
-
 export const criaCirculo = (x, y) =>{
+    let numCirculo = dados.circulo.length;
     let canvas = document.getElementById("map");
     let circulo = document.createElement('div');
 
