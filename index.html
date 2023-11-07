@@ -48,7 +48,7 @@
                     <div class="flex grow">
                         <header >
                             <nav class="h-full">
-                                <div class="w-32 h-full p-4 z-40 flex flex-col shadow-md" id="control">
+                                <div class="w-32 h-full p-4 z-40 flex flex-col transition-all overflow-hidden" id="control">
                                     <div class="grow">
                                         <div class="w-16 h-16 mx-4 mb-8 cursor-pointer bg-orange-400" id="quadrado"></div>
                                         <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
@@ -57,7 +57,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button class="bg-green-200">Configurações</button>
+                                        <a href="#atalhos"><button class="w-full text-xl text-center bg-gray-100">atalhos</button></a>
+                                        <a href="#menuconfig"><button class="w-full text-xl text-center bg-green-500">...</button></a>
                                     </div>
                                 </div>
                             </nav>
@@ -65,7 +66,7 @@
                         <section class="grow relative" id="controlright">
                             <div class="w-full h-full relative bg-green-200" id="map"></div>
                         </section>
-                        <div class="w-64 md:w-96 p-8 z-50 border-box flex flex-col">
+                        <div class="w-64 md:w-96 p-8 z-50 border-box flex flex-col" id="painelDireito">
                             <div class="grow">
                                 <h2>Painel de Priedades</h2>
                                 <h3 class="my-2 font-bold text-green-500" id="elementoPainel">Elemento Selecionado</h3>
@@ -75,6 +76,101 @@
                             </div>
                             <h2 class="text-xl">Dica</h2>
                             <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-h-screen flex items-center justify-center bg-white" id="menuconfig">
+                    <div class="flex">
+                        <div class="w-32">
+                            <a href="#mapa"><h2>Voltar</h2></a>
+                        </div>
+                        <div>
+                            <h2 class="text-xl">Configurações</h2>
+                            <div class="py-2">
+                                <label class="hover:cursor-pointer">Tema Escuro</label>
+                                <input type="radio" name="escuro" id="dark">
+                                <input type="radio" name="escuro" id="dark">
+                            </div>
+                            <div class="py-2">
+                                <label class="hover:cursor-pointer" for="font">Mudar Font</label>
+                                <input type="radio" id="font">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-h-screen flex items-center justify-center bg-white" id="atalhos">
+                    <div class="flex">
+                        <div class="w-32">
+                            <a href="#mapa"><h2>Voltar</h2></a>
+                        </div>
+                        <div>
+                            <h2 class="text-xl">Atalhos</h2>
+                            <div class="py-2">
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                                <details>
+                                    <summary>Deletar Tudo</summary>
+                                    Control + D
+                                </details>
+                            </div>
                         </div>
                     </div>
                 </div>
