@@ -47,14 +47,14 @@ export const ImportCirculo = (x, y, color, width, height) =>{
 /////////////////////////////////////////
 /////////////////////////////////////////
 
-export const ImportQuadrado = (x, y, color, width, height, content) =>{
+export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) =>{
     let quadrado = document.createElement('div');
 
     let textBox = document.createElement('textarea');
     textBox.value = content;
     /*
-    textBox.type = "text";
-    textBox.placeholder = "adicione texto aqui";
+        textBox.type = "text";
+        textBox.placeholder = "adicione texto aqui";
     */
     textBox.style.outline = "none";
     textBox.style.height = "auto";
@@ -77,13 +77,14 @@ export const ImportQuadrado = (x, y, color, width, height, content) =>{
 
         box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
         background-color: ${color};
+        rotate: ${rotacionar}deg
         `
     ;
 
     quadrado.appendChild(textBox);
     canvas.appendChild(quadrado);
     dados.quadrado.push(
-        ["Q" + numQuadrado, x, y, color, width.toString(), height.toString(), content]
+        ["Q" + numQuadrado, x, y, color, width.toString(), height.toString(), content, rotacionar]
     );
 }
 
@@ -91,7 +92,7 @@ export const ImportQuadrado = (x, y, color, width, height, content) =>{
 /////////////////////////////////////////
 /////////////////////////////////////////
 
-export const Importtriangulo = (x, y, color, width, height) =>{
+export const Importtriangulo = (x, y, color, width, height, rotacionar) =>{
     let triangulo = document.createElement('div');
 
     numTriangulo++;
@@ -108,6 +109,7 @@ export const Importtriangulo = (x, y, color, width, height) =>{
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
         border-bottom: 100px solid ${color};
+        rotate: ${rotacionar}deg
         `
     ;
 

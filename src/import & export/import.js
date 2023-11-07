@@ -17,7 +17,7 @@ fileInput.addEventListener("change", (e) => {
                 const resposta = JSON.parse(jsonData);
 
                 for (let i = 0; i < resposta.quadrado.length; i++) {
-                    ImportQuadrado(resposta.quadrado[i][1], resposta.quadrado[i][2], resposta.quadrado[i][3], resposta.quadrado[i][4], resposta.quadrado[i][5], resposta.quadrado[i][6]);
+                    ImportQuadrado(resposta.quadrado[i][1], resposta.quadrado[i][2], resposta.quadrado[i][3], resposta.quadrado[i][4], resposta.quadrado[i][5], resposta.quadrado[i][6], resposta.quadrado[i][7]);
                 }
 
                 for (let i = 0; i < resposta.circulo.length; i++) {
@@ -25,7 +25,7 @@ fileInput.addEventListener("change", (e) => {
                 }
 
                 for (let i = 0; i < resposta.triangulo.length; i++) {
-                    Importtriangulo(resposta.triangulo[i][1], resposta.triangulo[i][2], resposta.triangulo[i][3], resposta.triangulo[i][4], resposta.triangulo[i][5]);
+                    Importtriangulo(resposta.triangulo[i][1], resposta.triangulo[i][2], resposta.triangulo[i][3], resposta.triangulo[i][4], resposta.triangulo[i][5], resposta.quadrado[i][7]);
                 }
             } catch (error) {
                 console.error("Erro ao analisar o JSON:", error);

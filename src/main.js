@@ -7,6 +7,7 @@ import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 import { capturaImage } from "./images/captura.js";
 import { abrirmenu } from "./design/hiddenControl.js";
+import { dados } from "./data/dados.js";
 
 // Folha
 let map = document.getElementById("map");
@@ -66,6 +67,7 @@ control.addEventListener("click",(e)=>{
     if(e.target === control){
         return;
     }
+    console.log(dados);
 
     const elementoSelect = () =>{
         e.target.classList.toggle("bg-yellow-500");

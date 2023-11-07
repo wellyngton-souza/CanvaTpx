@@ -1,6 +1,7 @@
 import { mudarCor } from "../styleObb/color.js";
 import { mudarLargura } from "../styleObb/largura.js";
 import { mudarAltura } from "../styleObb/altura.js";
+import { mudarRotacao } from "../styleObb/rotacionar.js";
 
 let canvas = document.getElementById("map");
 let config = document.createElement('div');
@@ -9,6 +10,7 @@ let object;
 let cor;
 let largura;
 let altura;
+let rotacao;
 
 export const configObjeto = (e, posicao) =>{
     config.id = "configMain";
@@ -17,6 +19,7 @@ export const configObjeto = (e, posicao) =>{
         <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarCor">COR</div>
         <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarLargura">Largura</div>
         <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarAltura">Altura</div>
+        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarRotacao">Rotação</div>
     `;
     
     canvas.appendChild(config);
@@ -74,6 +77,18 @@ export const configObjeto = (e, posicao) =>{
         }
 
         mudarAltura(object, altura);
+        config.style.display = "none";
+        return;
+    });
+
+    rotacao = document.getElementById("mudarRotacao");
+    rotacao.addEventListener("click",()=>{
+        let rotacao = prompt("digite rotacao aqui");
+        if(!rotacao){
+            return;
+        }
+
+        mudarRotacao(object, rotacao);
         config.style.display = "none";
         return;
     });
