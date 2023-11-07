@@ -15,7 +15,7 @@ export const criaCirculo = (x, y) =>{
 
     circulo.style.cssText = `
         position: absolute;
-        left: ${x - 128}px;
+        left: ${x}px;
         top: ${y}px;
         
         width: ${width}px;

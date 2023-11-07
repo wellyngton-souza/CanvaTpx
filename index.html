@@ -57,16 +57,17 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <a href="#atalhos"><button class="w-full text-xl text-center bg-gray-100">atalhos</button></a>
                                         <a href="#menuconfig"><button class="w-full text-xl text-center bg-green-500">...</button></a>
                                     </div>
                                 </div>
                             </nav>
                         </header>
                         <section class="grow relative" id="controlright">
-                            <div class="w-full h-full relative bg-green-200" id="map"></div>
+                            <div class="w-full h-full flex items-center justify-center bg-gray-500">
+                                <div class="w-96 h-96 relative bg-green-200" id="map"></div>
+                            </div>
                         </section>
-                        <div class="w-64 md:w-96 p-8 z-50 border-box flex flex-col" id="painelDireito">
+                        <div class="w-64 lg:w-96 p-8 z-50 border-box flex flex-col" id="painelDireito">
                             <div class="grow">
                                 <h2>Painel de Priedades</h2>
                                 <h3 class="my-2 font-bold text-green-500" id="elementoPainel">Elemento Selecionado</h3>
@@ -95,13 +96,14 @@
                                 <label class="hover:cursor-pointer" for="font">Mudar Font</label>
                                 <input type="radio" id="font">
                             </div>
+                            <a href="#atalhos"><button class="w-full text-xl text-center bg-gray-300">atalhos</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="min-h-screen flex items-center justify-center bg-white" id="atalhos">
                     <div class="flex">
                         <div class="w-32">
-                            <a href="#mapa"><h2>Voltar</h2></a>
+                            <a href="#menuconfig"><h2>Voltar</h2></a>
                         </div>
                         <div>
                             <h2 class="text-xl">Atalhos</h2>

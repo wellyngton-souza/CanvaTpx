@@ -38,7 +38,7 @@ export const abrirPainel = (e, x, y) =>{
 
         background-color: ${color};
 
-        left: ${x - 128}px;
+        left: ${x}px;
         top: ${y + 50}px;
 
         padding: 0 10px;

@@ -34,17 +34,17 @@ map.addEventListener("click",(e)=>{
 
     if(item === "quadrado"){
         if(e.target == map){
-            criaQuadrado(e.clientX, clickrelative);
+            criaQuadrado(e.offsetX, clickrelative);
         }
         item = null;
     } else if(item === "circulo"){
         if(e.target == map){
-            criaCirculo(e.clientX, clickrelative);
+            criaCirculo(e.offsetX, clickrelative);
         }
         item = null;
     } else if(item === "triangulo"){
         if(e.target == map){
-            criatriangulo(e.clientX, clickrelative);
+            criatriangulo(e.offsetX, clickrelative);
         }
         item = null;
     }
@@ -59,7 +59,7 @@ map.addEventListener("click",(e)=>{
 });
 
 map.addEventListener("contextmenu",(e)=>{
-    abrirPainel(e, e.clientX, e.clientY - map.getBoundingClientRect().top);
+    abrirPainel(e, e.offsetX, e.clientY - map.getBoundingClientRect().top);
 });
 
 control.addEventListener("click",(e)=>{

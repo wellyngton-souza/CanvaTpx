@@ -35,7 +35,7 @@ export const criaQuadrado = (x, y) =>{
 
     quadrado.style.cssText = `
         position: absolute;
-        left: ${x - 128}px;
+        left: ${x}px;
         top: ${y}px;
         
         width: ${width}px;

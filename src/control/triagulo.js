@@ -25,7 +25,7 @@ export const criatriangulo = (x, y) =>{
 
     triangulo.style.cssText = `
         position: absolute;
-        left: ${x - 128}px;
+        left: ${x}px;
         top: ${y}px;
 
         cursor: move;
