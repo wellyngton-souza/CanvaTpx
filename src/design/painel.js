@@ -26,20 +26,18 @@ export const criaPainel = () =>{
 export const abrirPainel = (e, x, y) =>{
     e.preventDefault();
 
-    if(e.target == canvas || e.target == painel){
-        return;
-    }
+    if(e.target == canvas || e.target == painel) return;
 
     let color = "white";
 
     painel.style.cssText = `
         display: block;
-        position: absolute;
+        position: fixed;
 
         background-color: ${color};
 
         left: ${x}px;
-        top: ${y + 50}px;
+        top: ${y + 32}px;
 
         padding: 0 10px;
         border-radius: 8px;
@@ -55,9 +53,7 @@ export const abrirPainel = (e, x, y) =>{
 
     aberto = true;
 
-    if(e.target.tagName == "TEXTAREA"){
-        return;
-    }
+    if(e.target.tagName == "TEXTAREA") return;
 
     elementoSelect = e.target;
 }
@@ -73,9 +69,7 @@ export const fechaPainel = (e) =>{
     painel.style.display = "none";
     aberto = false;
 
-    if(!elementoSelect){
-        return;
-    }
+    if(!elementoSelect) return;
 
     if(e.target == document.getElementById("apagar")){
         elementoSelect.remove();

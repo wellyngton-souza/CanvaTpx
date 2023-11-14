@@ -27,7 +27,7 @@ export const configObjeto = (e, posicao) =>{
     let color = "white";
 
     config.style.cssText = `
-        position: absolute;
+        position: fixed;
 
         background-color: ${color};
 

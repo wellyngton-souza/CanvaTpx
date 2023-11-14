@@ -60,13 +60,12 @@ map.addEventListener("click",(e)=>{
 });
 
 map.addEventListener("contextmenu",(e)=>{
-    abrirPainel(e, e.offsetX, e.clientY - map.getBoundingClientRect().top);
+    abrirPainel(e, e.clientX, e.clientY);
 });
 
 control.addEventListener("click",(e)=>{
-    if(e.target === control){
-        return;
-    }
+    if(e.target === control) return;
+    
     console.log(dados);
 
     const elementoSelect = () =>{
