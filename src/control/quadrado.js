@@ -43,9 +43,9 @@ export const criaQuadrado = (x, y) =>{
 
         cursor: move;
         padding: 10px;
-        border-top: 4px solid orange;
+        border-top: 8px solid pink;
 
-        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+        /* box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75); */
         background-color: ${color};
         `
     ;

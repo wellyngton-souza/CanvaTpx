@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="shortcut icon" href="./assets/S.png">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sketch</title>
@@ -15,11 +16,12 @@
                 <div class="min-h-screen flex items-center justify-center bg-white">
                     <div>
                         <div class="flex justify-center">
-                            <img class="w-64" src="./assets/S.png" alt="Sketch">
+                            <img class="w-64" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_AXNgH3KQqNqshI25XCaCceUYGIzwVsrKWA&usqp=CAU" alt="Sketch">
                         </div>
+                        <h2 class="text-3xl">Scketch</h2>
                         <p>Onde suas ideias ficam anotadas</p>
                         <a href="#mapa">
-                            <button class="py-2 px-32 my-2 rounded-lg transition-color border-4 border-black hover:bg-green-200">Entrar</button>
+                            <button class="py-2 px-32 my-2 rounded-lg transition-color border-2 border-black hover:bg-purple-200">Entrar</button>
                         </a>
                     </div>
                 </div>
@@ -27,22 +29,22 @@
             <article>
                 <div class="min-h-screen flex flex-col" id="mapa">
                     <div class="w-full px-4 py-2 z-30 shadow-md">
-                        <div class="w-16 h-8 absolute z-50 mx-4 my-2 rounded-xl cursor-pointer bg-green-200" id="abrirmenu">
+                        <div class="w-16 h-8 absolute z-50 mx-4 my-2 rounded-xl cursor-pointer bg-purple-200" id="abrirmenu">
                             <div class="w-8 h-8 end-0 transition rounded-full absolute bg-black" id="switchcontrol"></div>
                         </div>
                         <div class="pl-32">
                             <h2 class="text-xl">Sketch</h2>
                             <div class="flex flex-wrap">
                                 <h2 class="pr-4">Ferramentas</h2>
-                                <button class="px-4 bg-green-200 hover:bg-green-400" id="apagaTudo">Apagar Tudo</button>
-                                <button class="px-4 bg-green-200 hover:bg-green-400" id="salvaimagem">Salvar Imagem</button>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="apagaTudo">Apagar Tudo</button>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="salvaimagem">Salvar Imagem</button>
                                 <div>
                                     <label id="myfile">
-                                        <p class="px-4 bg-green-200 hover:bg-green-400 cursor-pointer">importar</p>
+                                        <p class="px-4 bg-purple-200 hover:bg-purple-400 cursor-pointer">importar</p>
                                     </label>
                                     <input class="hidden" type="file" id="meujson">
                                 </div>
-                                <button class="px-4 bg-green-200 hover:bg-green-400" id="bdjson">Baixar em Json</button>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="bdjson">Baixar em Json</button>
                             </div>
                         </div>
                     </div>
@@ -51,14 +53,14 @@
                             <nav class="h-full">
                                 <div class="w-32 h-full p-4 z-40 flex flex-col transition-all overflow-hidden" id="control">
                                     <div class="grow">
-                                        <div class="w-16 h-16 mx-4 mb-8 cursor-pointer bg-orange-400" id="quadrado"></div>
-                                        <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-orange-400" id="circulo"></div>
+                                        <div class="w-16 h-16 mx-4 mb-8 cursor-pointer bg-pink-400" id="quadrado"></div>
+                                        <div class="w-16 h-16 mx-4 my-8 rounded-full cursor-pointer bg-pink-400" id="circulo"></div>
                                         <div class="flex justify-center">
                                             <div id="triangulo"></div>
                                         </div>
                                     </div>
                                     <div>
-                                        <a href="#menuconfig"><button class="w-full text-xl text-center bg-green-500">...</button></a>
+                                        <a href="#menuconfig"><button class="w-full text-xl text-center bg-purple-500">...</button></a>
                                     </div>
                                 </div>
                             </nav>
@@ -71,7 +73,7 @@
                         <div class="w-64 lg:w-96 p-8 z-50 border-box flex flex-col" id="painelDireito">
                             <div class="grow">
                                 <h2>Painel de Priedades</h2>
-                                <h3 class="my-2 font-bold text-green-500" id="elementoPainel">Elemento Selecionado</h3>
+                                <h3 class="my-2 font-bold text-purple-500" id="elementoPainel">Elemento Selecionado</h3>
                                 <p id="X_properties">x</p>
                                 <p id="Y_properties">y</p>
                                 <p id="COLOR_properties">color</p>

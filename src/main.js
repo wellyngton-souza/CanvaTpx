@@ -53,7 +53,7 @@ map.addEventListener("click",(e)=>{
     fechaPainel(e);
 
     if(itemSelect){
-        itemSelect.classList.toggle("bg-yellow-500");
+        itemSelect.classList.toggle("bg-purple-500");
         itemSelect = null;
         document.body.style.cursor = "default";
     }
@@ -69,7 +69,7 @@ control.addEventListener("click",(e)=>{
     console.log(dados);
 
     const elementoSelect = () =>{
-        e.target.classList.toggle("bg-yellow-500");
+        e.target.classList.toggle("bg-purple-500");
         document.body.style.cursor = "crosshair";
         itemSelect = e.target;
     }

@@ -16,10 +16,10 @@ export const configObjeto = (e, posicao) =>{
     config.id = "configMain";
 
     config.innerHTML = `
-        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarCor">COR</div>
-        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarLargura">Largura</div>
-        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarAltura">Altura</div>
-        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-yellow-500 bg-yellow-300" id="mudarRotacao">Rotação</div>
+        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-purple-500 bg-purple-300" id="mudarCor">COR</div>
+        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-purple-500 bg-purple-300" id="mudarLargura">Largura</div>
+        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-purple-500 bg-purple-300" id="mudarAltura">Altura</div>
+        <div class="px-4 my-4 cursor-pointer py-2 rounded-lg hover:bg-purple-500 bg-purple-300" id="mudarRotacao">Rotação</div>
     `;
     
     canvas.appendChild(config);

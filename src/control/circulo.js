@@ -7,7 +7,7 @@ export const criaCirculo = (x, y) =>{
 
     let width = 75;
     let height = 75;
-    let color = "orange";
+    let color = "pink";
 
     numCirculo++;
 

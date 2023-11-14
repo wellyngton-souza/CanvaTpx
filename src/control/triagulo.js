@@ -6,7 +6,7 @@ document.getElementById("triangulo").style.cssText = `
 
     border-left: 32px solid transparent;
     border-right: 32px solid transparent;
-    border-bottom: 64px solid orange;
+    border-bottom: 64px solid rgb(244 114 182);
     `
 ;
 
@@ -14,7 +14,7 @@ export const criatriangulo = (x, y) =>{
     let numTriangulo = dados.triangulo.length;
     let canvas = document.getElementById("map");
     let triangulo = document.createElement('div');
-    let color = "orange";
+    let color = "pink";
 
     numTriangulo++;
 
@@ -34,7 +34,7 @@ export const criatriangulo = (x, y) =>{
 
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 100px solid orange;
+        border-bottom: 100px solid pink;
         `
     ;
 
