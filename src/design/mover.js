@@ -57,6 +57,10 @@ export const moverBloco = ( arrastando, segurando ) =>{
         segurando.style.left = (e.clientX - X) + "px";
         segurando.style.top = (e.clientY - Y) + "px";
 
+        puxarPropriedadesElemento(e.target, "X", 1);
+        puxarPropriedadesElemento(e.target, "Y", 2);
+        puxarPropriedadesElemento(e.target, "COLOR", 3);
+
         for(let i = 0; i < dados.circulo.length; i++){
             if(e.target.id === dados.circulo[i][0]){
                 dados.circulo[i][1] = (e.clientX - X) + "px";
