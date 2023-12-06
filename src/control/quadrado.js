@@ -13,11 +13,13 @@ export const criaQuadrado = (x, y) =>{
     */
     textBox.style.outline = "none";
     textBox.style.height = "auto";
+    textBox.style.width = "100%";
+    textBox.style.height = "100%";
     textBox.id = "Qi" + numQuadrado;
     textBox.placeholder = content;
 
-    let width = 200;
-    let height = 75;
+    let width = 300;
+    let height = 150;
     let color = "white";
 
     numQuadrado++;

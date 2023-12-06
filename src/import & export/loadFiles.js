@@ -58,6 +58,10 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
     */
     textBox.style.outline = "none";
     textBox.style.height = "auto";
+    textBox.style.width = "100%";
+    textBox.style.height = "100%";
+    textBox.id = "Qi" + numQuadrado;
+    textBox.placeholder = content;
 
     numQuadrado++;
 
@@ -73,7 +77,7 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
 
         cursor: move;
         padding: 10px;
-        border-top: 4px solid orange;
+        border-top: 8px solid pink;
 
         box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
         background-color: ${color};
