@@ -4,11 +4,26 @@ document.getElementById("triangulo").style.cssText = `
     cursor: move;
     width: 32px;
 
-    border-left: 32px solid transparent;
-    border-right: 32px solid transparent;
-    border-bottom: 64px solid rgb(244 114 182);
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 32px solid rgb(244 114 182);
     `
 ;
+
+const ajustarEstilos = () => {
+    if (window.innerWidth >= 1024) {
+        triangulo.style.borderLeft = '32px solid transparent';
+        triangulo.style.borderRight = '32px solid transparent';
+        triangulo.style.borderBottom = '64px solid rgb(244, 114, 182)';
+    } else {
+        triangulo.style.borderLeft = '16px solid transparent';
+        triangulo.style.borderRight = '16px solid transparent';
+        triangulo.style.borderBottom = '32px solid rgb(244, 114, 182)';
+    }
+}
+
+window.addEventListener('load', ajustarEstilos);
+window.addEventListener('resize', ajustarEstilos);
 
 export const criatriangulo = (x, y) =>{
     let numTriangulo = dados.triangulo.length;
