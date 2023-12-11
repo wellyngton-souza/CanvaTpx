@@ -6,6 +6,8 @@ import { moverBloco } from "./design/mover.js";
 import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 import { capturaImage } from "./images/captura.js";
+import { adicionarParticulas } from "./design/particulasMouse.js";
+import { comecaTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
 import { abrirmenu } from "./design/hiddenControl.js";
 import { dados } from "./data/dados.js";
 
@@ -92,3 +94,18 @@ document.getElementById("apagaTudo").addEventListener("click", apagarTudo);
 document.getElementById("bdjson").addEventListener("click", exportarJson);
 document.getElementById("salvaimagem").addEventListener("click", capturaImage);
 document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
+document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
+
+let verificarTema = localStorage.getItem("theme") || {};
+
+if(verificarTema === "dark"){
+    comecaTemaEscuro();
+} else{
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        comecaTemaEscuro();
+    } else {
+        console.log("Tema claro preferido ou não suportado");
+    }
+}
+
+document.addEventListener("mousemove", adicionarParticulas);
