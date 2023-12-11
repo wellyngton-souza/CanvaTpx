@@ -7,7 +7,7 @@ import { apagarTudo } from "./design/apagarTudo.js";
 import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 import { capturaImage } from "./images/captura.js";
 import { adicionarParticulas } from "./design/particulasMouse.js";
-import { comecaTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
+import { verificarTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
 import { abrirmenu } from "./design/hiddenControl.js";
 import { dados } from "./data/dados.js";
 
@@ -37,17 +37,17 @@ map.addEventListener("click",(e)=>{
 
     if(item === "quadrado"){
         if(e.target == map){
-            criaQuadrado(e.offsetX, clickrelative);
+            criaQuadrado(e.offsetX + e.target.scrollLeft, clickrelative + e.target.scrollTop);
         }
         item = null;
     } else if(item === "circulo"){
         if(e.target == map){
-            criaCirculo(e.offsetX, clickrelative);
+            criaCirculo(e.offsetX + e.target.scrollLeft, clickrelative + e.target.scrollTop);
         }
         item = null;
     } else if(item === "triangulo"){
         if(e.target == map){
-            criatriangulo(e.offsetX, clickrelative);
+            criatriangulo(e.offsetX + e.target.scrollLeft, clickrelative + e.target.scrollTop);
         }
         item = null;
     }
@@ -96,16 +96,6 @@ document.getElementById("salvaimagem").addEventListener("click", capturaImage);
 document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
 document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
 
-let verificarTema = localStorage.getItem("theme") || {};
+verificarTemaEscuro();
 
-if(verificarTema === "dark"){
-    comecaTemaEscuro();
-} else{
-    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-        comecaTemaEscuro();
-    } else {
-        console.log("Tema claro preferido ou não suportado");
-    }
-}
-
-document.addEventListener("mousemove", adicionarParticulas);
+// document.addEventListener("mousemove", adicionarParticulas);
