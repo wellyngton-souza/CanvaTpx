@@ -61,6 +61,7 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
     textBox.style.width = "100%";
     textBox.style.height = "100%";
     textBox.style.resize = "none";
+    textBox.style.backgroundColor = "transparent";
     textBox.id = "Qi" + numQuadrado;
     textBox.placeholder = content;
 
@@ -80,11 +81,14 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
         padding: 10px;
         border-top: 8px solid pink;
 
-        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
-        background-color: ${color};
-        rotate: ${rotacionar}deg
+        /* box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75); */
+        rotate: ${rotacionar}deg;
         `
     ;
+
+    if(color !== "white"){
+        quadrado.style.backgroundColor = color;
+    }
 
     quadrado.appendChild(textBox);
     canvas.appendChild(quadrado);

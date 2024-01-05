@@ -96,6 +96,28 @@ document.getElementById("salvaimagem").addEventListener("click", capturaImage);
 document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
 document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
 
+document.addEventListener("keydown", (e) =>{
+    let elementoAtivo = document.activeElement;
+    let ativo = elementoAtivo.tagName === "INPUT" || elementoAtivo.tagName === "TEXTAREA";
+
+    let elementos = [
+        "quadrado",
+        "circulo",
+        "triangulo"
+    ];
+
+    if(!ativo){
+        for(let i = 0; i < elementos.length; i++){
+            if(e.key.toLowerCase() === elementos[i][0]){
+                item = elementos[i];
+                document.getElementById(elementos[i]).classList.toggle("bg-purple-500");
+                document.body.style.cursor = "crosshair";
+                itemSelect = document.getElementById(elementos[i]);
+            }
+        }
+    }
+});
+
 verificarTemaEscuro();
 
 // document.addEventListener("mousemove", adicionarParticulas);

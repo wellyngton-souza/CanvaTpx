@@ -16,6 +16,7 @@ export const criaQuadrado = (x, y) =>{
     textBox.style.width = "100%";
     textBox.style.height = "100%";
     textBox.style.resize = "none";
+    textBox.style.backgroundColor = "transparent";
     textBox.id = "Qi" + numQuadrado;
     textBox.placeholder = content;
 
@@ -47,9 +48,13 @@ export const criaQuadrado = (x, y) =>{
         cursor: move;
         padding: 10px;
         border-top: 8px solid pink;
-
-        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
-        background-color: ${color};
+        /*
+        border-top: 8px solid;
+        border-image: linear-gradient(to right, #8a2be2, #FF1493);
+        border-image-slice: 1;
+        */
+        /* box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75); */
+        /* background-color: ${color} */;
         `
     ;
 
