@@ -1,4 +1,5 @@
 import { dados } from "../data/dados.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 export const criaCirculo = (x, y) =>{
     let numCirculo = dados.circulo.length;
@@ -40,4 +41,6 @@ export const criaCirculo = (x, y) =>{
     dados.circulo.push(
         ["C" + numCirculo, x - 128 + "px", y + "px", color, width, height]
     );
+
+    updateDados();
 }

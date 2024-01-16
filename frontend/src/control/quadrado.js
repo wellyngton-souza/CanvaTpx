@@ -1,11 +1,12 @@
 import { dados } from "../data/dados.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 export const criaQuadrado = (x, y) =>{
     let numQuadrado = dados.quadrado.length;
     let canvas = document.getElementById("map");
-    let quadrado = document.createElement('div');
+    let quadrado = document.createElement("div");
 
-    let textBox = document.createElement('textarea');
+    let textBox = document.createElement("textarea");
     let content = "insira um texto aqui";
     /*
     textBox.type = "text";
@@ -28,11 +29,12 @@ export const criaQuadrado = (x, y) =>{
 
     quadrado.id = "Q" + numQuadrado;
 
-    textBox.addEventListener("change", ()=>{
+    textBox.addEventListener("change", () =>{
         for(let i = 0; i < dados.quadrado.length; i++){
             if(dados.quadrado[i][0] === quadrado.id){
                 dados.quadrado[i][6] = textBox.value;
-                console.log(dados.quadrado)
+                console.log(dados.quadrado);
+                updateDados();
             }
         }
     });
@@ -63,4 +65,6 @@ export const criaQuadrado = (x, y) =>{
     dados.quadrado.push(
         ["Q" + numQuadrado, x - 128 + "px", y + "px", color, width, height, content, 0]
     );
+
+    updateDados();
 }

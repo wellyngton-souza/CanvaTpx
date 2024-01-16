@@ -1,3 +1,4 @@
+import { updateDados } from "../../../backend/updateProject.js";
 import { dados } from "../data/dados.js";
 
 export const mudarAltura = (e, altura) =>{
@@ -7,6 +8,7 @@ export const mudarAltura = (e, altura) =>{
         if(e.id === dados.circulo[i][0]){
             dados.circulo[i][5] = altura;
             console.log(dados);
+            updateDados();
             return;
         }
     }
@@ -15,6 +17,7 @@ export const mudarAltura = (e, altura) =>{
         if(e.id === dados.quadrado[i][0]){
             dados.quadrado[i][5] = altura;
             console.log(dados);
+            updateDados();
             return;
         }
     }
@@ -23,6 +26,7 @@ export const mudarAltura = (e, altura) =>{
         if(e.id === dados.triangulo[i][0]){
             dados.triangulo[i][5] = altura;
             console.log(dados);
+            updateDados();
             return;
         }
     }

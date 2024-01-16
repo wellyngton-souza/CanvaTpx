@@ -9,6 +9,7 @@ import { capturaImage } from "./images/captura.js";
 import { adicionarParticulas } from "./design/particulasMouse.js";
 import { verificarTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
 import { abrirmenu } from "./design/hiddenControl.js";
+import { puxarJson } from "../../backend/updateProject.js";
 import { dados } from "./data/dados.js";
 
 // Folha
@@ -119,5 +120,6 @@ document.addEventListener("keydown", (e) =>{
 });
 
 verificarTemaEscuro();
+puxarJson();
 
 // document.addEventListener("mousemove", adicionarParticulas);

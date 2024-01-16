@@ -1,4 +1,5 @@
 import { dados } from "../data/dados.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 document.getElementById("triangulo").style.cssText = `
     cursor: move;
@@ -57,4 +58,6 @@ export const criatriangulo = (x, y) =>{
     dados.triangulo.push(
         ["T" + numTriangulo, x - 128 + "px", y + "px", color, `"${width}"`, `"${height}"`, 0]
     );
+
+    updateDados();
 }

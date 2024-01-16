@@ -1,4 +1,5 @@
 import { dados } from "../data/dados.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 let X;
 let Y;
@@ -54,6 +55,7 @@ export const moverBloco = ( arrastando, segurando ) =>{
             return;
         }
         
+        updateDados();
         segurando.style.left = (e.clientX - X) + "px";
         segurando.style.top = (e.clientY - Y) + "px";
 

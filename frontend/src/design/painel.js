@@ -1,5 +1,6 @@
 import { dados } from "../data/dados.js";
 import { configObjeto } from "./configObjeto.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 let aberto = false;
 
@@ -77,6 +78,7 @@ export const fechaPainel = (e) =>{
         for(let i = 0; i < dados.circulo.length; i++){
             if(elementoSelect.id === dados.circulo[i][0]){
                 dados.circulo.splice(i, 1);
+                updateDados();
                 return;
             }
         }
@@ -84,6 +86,7 @@ export const fechaPainel = (e) =>{
         for(let i = 0; i < dados.quadrado.length; i++){
             if(elementoSelect.id === dados.quadrado[i][0]){
                 dados.quadrado.splice(i, 1);
+                updateDados();
                 return;
             }
         }
@@ -91,6 +94,7 @@ export const fechaPainel = (e) =>{
         for(let i = 0; i < dados.triangulo.length; i++){
             if(elementoSelect.id === dados.triangulo[i][0]){
                 dados.triangulo.splice(i, 1);
+                updateDados();
                 return;
             }
         }
