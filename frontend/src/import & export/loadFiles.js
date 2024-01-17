@@ -1,4 +1,5 @@
 import { dados } from "../data/dados.js";
+import { updateDados } from "../../../backend/updateProject.js";
 
 let numCirculo = 0;
 let numQuadrado = 0;
@@ -68,6 +69,17 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
     numQuadrado++;
 
     quadrado.id = "Q" + numQuadrado;
+
+    textBox.addEventListener("input", () =>{
+        for(let i = 0; i < dados.quadrado.length; i++){
+            if(dados.quadrado[i][0] === quadrado.id){
+                dados.quadrado[i][6] = textBox.value;
+                console.log(dados.quadrado);
+                updateDados();
+                break;
+            }
+        }
+    });
 
     quadrado.style.cssText = `
         position: absolute;

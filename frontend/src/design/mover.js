@@ -55,7 +55,6 @@ export const moverBloco = ( arrastando, segurando ) =>{
             return;
         }
         
-        updateDados();
         segurando.style.left = (e.clientX - X) + "px";
         segurando.style.top = (e.clientY - Y) + "px";
 
@@ -90,6 +89,7 @@ export const moverBloco = ( arrastando, segurando ) =>{
 
     document.addEventListener("mouseup", ()=>{
         arrastando = false;
+        updateDados();
     });
 
     // Touch Mobile
@@ -150,5 +150,6 @@ export const moverBloco = ( arrastando, segurando ) =>{
     
     document.addEventListener('touchend', (e) => {
         arrastando = false;
+        updateDados();
     });
 }

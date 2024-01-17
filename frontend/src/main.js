@@ -10,6 +10,8 @@ import { adicionarParticulas } from "./design/particulasMouse.js";
 import { verificarTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
 import { abrirmenu } from "./design/hiddenControl.js";
 import { puxarJson } from "../../backend/updateProject.js";
+import { app } from "../../backend/firebaseConfig.js";
+import { getDatabase, ref, get, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { dados } from "./data/dados.js";
 
 // Folha
@@ -119,7 +121,17 @@ document.addEventListener("keydown", (e) =>{
     }
 });
 
+const exibirTempoReal = async () =>{
+    const db = getDatabase(app);
+
+    onValue(ref(db, "projects/" + "wellyngton"), () =>{
+        puxarJson();
+        console.log("limpou");
+    }, { onlyOnce: false });
+}
+
 verificarTemaEscuro();
 puxarJson();
+exibirTempoReal();
 
 // document.addEventListener("mousemove", adicionarParticulas);

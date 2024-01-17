@@ -29,7 +29,7 @@ export const criaQuadrado = (x, y) =>{
 
     quadrado.id = "Q" + numQuadrado;
 
-    textBox.addEventListener("change", () =>{
+    textBox.addEventListener("input", () =>{
         for(let i = 0; i < dados.quadrado.length; i++){
             if(dados.quadrado[i][0] === quadrado.id){
                 dados.quadrado[i][6] = textBox.value;
