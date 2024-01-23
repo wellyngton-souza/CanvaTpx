@@ -20,7 +20,7 @@ document.getElementById("googleLogin").addEventListener("click", () => {
         };
 
         localStorage.setItem('logado', JSON.stringify(user));
-        window.location.href = '/';
+        window.location.href = "https://wellyngton-souza.github.io/Sketch/";
     })
     .catch((error) => {
         console.error("Erro de autenticação:", error);
