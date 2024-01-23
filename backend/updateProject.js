@@ -1,19 +1,20 @@
 import { app } from "./firebaseConfig.js";
 import { dados } from "../frontend/src/data/dados.js";
-import { apagarTudo } from "../frontend/src/design/apagarTudo.js";
+import { limparTudo } from "../frontend/src/design/apagarTudo.js";
 import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { ImportQuadrado, Importtriangulo, ImportCirculo } from "../frontend/src/import & export/loadFiles.js";
 
 export const updateDados = async () =>{
     const db = getDatabase(app);
+    const user = JSON.parse(localStorage.getItem("logado"));
 
-    set(ref(db, "projects/" + "wellyngton"),
+    set(ref(db, "projects/" + user.nome),
         dados
     );
 }
 
 const exibirTela = (dadosLocal) =>{
-    apagarTudo();
+    limparTudo();
 
     for (let i = 0; i < dadosLocal?.quadrado?.length; i++) {
         ImportQuadrado(dadosLocal.quadrado[i][1], dadosLocal.quadrado[i][2], dadosLocal.quadrado[i][3], dadosLocal.quadrado[i][4], dadosLocal.quadrado[i][5], dadosLocal.quadrado[i][6], dadosLocal.quadrado[i][7]);
@@ -30,8 +31,9 @@ const exibirTela = (dadosLocal) =>{
 
 export const puxarJson = async () =>{
     const db = getDatabase(app);
+    const user = JSON.parse(localStorage.getItem("logado"));
 
-    let busca = await get(ref(db, "projects/wellyngton"));
+    let busca = await get(ref(db, "projects/" + user.nome));
 
     //dados = busca.val();
 

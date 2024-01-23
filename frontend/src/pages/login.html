@@ -20,7 +20,7 @@
                             <h2 class="text-3xl font-bold">Sketch</h2>
                             <p>Seja muito bem vindo</p>
                             <div class="w-96 md:flex md:gap-8">
-                                <button class="w-96 md:w-auto py-3 mt-6 flex rounded-md items-center bg-gray-200 dark:bg-white hover:bg-gray-300">  
+                                <button class="w-96 md:w-auto py-3 mt-6 flex rounded-md items-center bg-gray-200 dark:bg-white hover:bg-gray-300" id="googleLogin">  
                                     <img class="w-6 md:w-7 mx-6 md:mx-3" src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" alt="google-icon">
                                     <h3 class="md:hidden block dark:text-black">Google</h3>  
                                 </button>
@@ -51,6 +51,8 @@
             darkMode: "class"
         }
     </script>
-    <script src="../design/darkTheme.js"></script>
+    <script type="module" src="../design/darkTheme.js"></script>
+    <script type="module" src="../../../backend/firebaseConfig.js"></script>
+    <script type="module" src="../../../backend/login.js"></script>
 </body>
 </html>

@@ -63,7 +63,7 @@ export const criaQuadrado = (x, y) =>{
     quadrado.appendChild(textBox);
     canvas.appendChild(quadrado);
     dados.quadrado.push(
-        ["Q" + numQuadrado, x - 128 + "px", y + "px", color, width, height, content, 0]
+        ["Q" + numQuadrado, x + "px", y + "px", color, width, height, content, 0]
     );
 
     updateDados();

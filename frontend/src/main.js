@@ -10,8 +10,9 @@ import { adicionarParticulas } from "./design/particulasMouse.js";
 import { verificarTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
 import { abrirmenu } from "./design/hiddenControl.js";
 import { puxarJson } from "../../backend/updateProject.js";
+import { sairApp } from "../../backend/logout.js";
 import { app } from "../../backend/firebaseConfig.js";
-import { getDatabase, ref, get, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { dados } from "./data/dados.js";
 
 // Folha
@@ -98,6 +99,7 @@ document.getElementById("bdjson").addEventListener("click", exportarJson);
 document.getElementById("salvaimagem").addEventListener("click", capturaImage);
 document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
 document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
+document.getElementById("botaosair").addEventListener("click", sairApp);
 
 document.addEventListener("keydown", (e) =>{
     let elementoAtivo = document.activeElement;
@@ -123,15 +125,35 @@ document.addEventListener("keydown", (e) =>{
 
 const exibirTempoReal = async () =>{
     const db = getDatabase(app);
+    const user = JSON.parse(localStorage.getItem("logado"));
 
-    onValue(ref(db, "projects/" + "wellyngton"), () =>{
+    onValue(ref(db, "projects/" + user.nome), () =>{
         puxarJson();
         console.log("limpou");
     }, { onlyOnce: false });
 }
 
+const verificarLogado = () =>{
+    const acesso = localStorage.getItem('logado');
+    if(!acesso){
+        window.location.href = './frontend/src/pages/login.html';
+    }
+}
+
+const puxarUsuario = () =>{
+    const user = JSON.parse(localStorage.getItem("logado"));
+
+    document.getElementById("nomeusuario").textContent = user.nome;
+    document.getElementById("fotousuario").src = user.foto;
+
+    document.getElementById("nomeusuarioconfig").textContent = user.nome;
+    document.getElementById("fotousuarioconfig").src = user.foto;    
+}
+
 verificarTemaEscuro();
+verificarLogado();
+puxarUsuario();
 puxarJson();
-exibirTempoReal();
+// exibirTempoReal();
 
 // document.addEventListener("mousemove", adicionarParticulas);

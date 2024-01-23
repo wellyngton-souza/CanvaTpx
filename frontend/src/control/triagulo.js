@@ -56,7 +56,7 @@ export const criatriangulo = (x, y) =>{
 
     canvas.appendChild(triangulo);
     dados.triangulo.push(
-        ["T" + numTriangulo, x - 128 + "px", y + "px", color, `"${width}"`, `"${height}"`, 0]
+        ["T" + numTriangulo, x + "px", y + "px", color, `"${width}"`, `"${height}"`, 0]
     );
 
     updateDados();

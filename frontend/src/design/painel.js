@@ -44,8 +44,6 @@ export const abrirPainel = (e, x, y) =>{
         border-radius: 8px;
 
         z-index: 99;
-        
-        display: block;
         `
     ;
 

@@ -39,7 +39,7 @@ export const criaCirculo = (x, y) =>{
     
     canvas.appendChild(circulo);
     dados.circulo.push(
-        ["C" + numCirculo, x - 128 + "px", y + "px", color, width, height]
+        ["C" + numCirculo, x + "px", y + "px", color, width, height]
     );
 
     updateDados();
