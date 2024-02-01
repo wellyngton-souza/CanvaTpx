@@ -6,9 +6,9 @@ export const criaCirculo = (x, y) =>{
     let canvas = document.getElementById("map");
     let circulo = document.createElement('div');
 
-    let width = 75;
-    let height = 75;
-    let color = "pink";
+    let width = 60;
+    let height = 60;
+    let color = "#f472b6";
 
     numCirculo++;
 

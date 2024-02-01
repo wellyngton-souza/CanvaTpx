@@ -5,7 +5,7 @@ const comecaTemaEscuro = () =>{
 
 export const verificarTemaEscuro = () =>{
     let verificarTema = localStorage.getItem("theme") || {};
-
+    
     if(verificarTema === "dark"){
         comecaTemaEscuro();
     } else{
@@ -20,5 +20,6 @@ export const verificarTemaEscuro = () =>{
 export const mudarTemaEscuro = () => {
     document.body.classList.toggle("dark");
     document.getElementById("switchcontrolescuro").classList.toggle("end-0");
+    console.log(localStorage.getItem("theme"));
     localStorage.getItem("theme") === "dark" ? localStorage.clear() : localStorage.setItem("theme", "dark");
 };

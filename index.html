@@ -11,128 +11,110 @@
 <body class="overflow-hidden">
     <main class="select-none">
         <article>
-            <section>
-                <div class="min-h-screen flex items-center justify-center dark:bg-slate-900 dark:text-white">
+            <div class="min-h-screen flex flex-col" id="mapa">
+                <div class="w-full px-4 py-2 z-30 bg-gradient-to-r from-purple-500 to-blue-500 shadow-md">
+                    <div class="w-16 h-8 absolute z-50 mx-4 my-2 rounded-xl cursor-pointer bg-purple-200" id="abrirmenu">
+                        <div class="w-8 h-8 transition rounded-full absolute bg-pink-500" id="switchcontrol"></div>
+                    </div>
+                    <div class="pl-32 flex items-center justify-between">
+                        <div>
+                            <h2 class="text-xl text-white">Sketch</h2>
+                            <div class="flex flex-wrap">
+                                <h2 class="pr-4 text-white">Ferramentas</h2>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="apagaTudo">Apagar Tudo</button>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="salvaimagem">Salvar Imagem</button>
+                                <div>
+                                    <label id="myfile">
+                                        <p class="px-4 bg-purple-200 hover:bg-purple-400 cursor-pointer">importar</p>
+                                    </label>
+                                    <input class="hidden" type="file" id="meujson">
+                                </div>
+                                <button class="px-4 bg-purple-200 hover:bg-purple-400" id="bdjson">Baixar em Json</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <p class="text-white" id="nomeusuario">teste</p>
+                            <img class="w-12 h-12 bg-red-200 rounded-full" id="fotousuario" src="" alt="img-user">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex grow">
+                    <header >
+                        <nav class="h-full bg-gray-100 dark:bg-gray-900">
+                            <div class="w-26 lg:w-32 h-full p-4 z-40 flex flex-col transition-all overflow-hidden" id="control">
+                                <div class="grow">
+                                    <div class="py-2 text-center rounded-md cursor-pointer border dark:text-white" id="quadrado" alt="quadrado">Quadrado</div>
+                                    <div class="mt-4 py-2 text-center rounded-md cursor-pointer border dark:text-white" id="circulo">Circulo</div>
+                                    <div class="mt-4 py-2 text-center rounded-md cursor-pointer border dark:text-white" id="triangulo">Triangulo</div>
+                                </div>
+                                <div>
+                                    <a href="#menuconfig"><button class="w-full text-xl text-center bg-purple-500">...</button></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+                    <section class="grow relative" id="controlright">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <div class="w-full h-full overflow-x-auto overflow-y-auto relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-800 dark:text-white" id="map"></div>
+                        </div>
+                    </section>
+                    <div class="w-64 lg:w-72 p-8 z-50 border-box flex flex-col bg-gray-100 dark:bg-gray-900 dark:text-white" id="painelDireito">
+                        <div class="grow">
+                            <h2>Painel de Priedades</h2>
+                            <h3 class="lg:my-2 font-bold animate-pulse text-purple-500" id="elementoPainel">Elemento Selecionado</h3>
+                            <p id="X_properties">x</p>
+                            <p id="Y_properties">y</p>
+                            <p id="COLOR_properties">color</p>
+                        </div>
+                        <h2 class="text-xl">Dica</h2>
+                        <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
+                    </div>
+                </div>
+            </div>
+            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="menuconfig">
+                <div class="flex">
+                    <div class="w-32">
+                        <a href="#"><h2>Voltar</h2></a>
+                    </div>
                     <div>
-                        <div class="flex justify-center">
-                            <img class="w-32 lg:w-64" src="./frontend/assets/SketchSemBackground.svg" alt="Sketch">
+                        <div class="flex items-center justify-center">
+                            <img class="w-24 h-24 lg:w-32 lg:h-32 bg-red-200 rounded-full" id="fotousuarioconfig" src="" alt="img-user">
                         </div>
-                        <h2 class="text-3xl font-bold">Scketch</h2>
-                        <p>Onde suas ideias ficam anotadas</p>
-                        <a href="#mapa">
-                            <button class="py-2 px-32 my-2 rounded-lg transition-color bg-purple-300 dark:bg-purple-600 hover:dark:bg-purple-500 hover:bg-marchie-300">Entrar</button>
-                        </a>
+                        <p class="text-center text-xl mb-4" id="nomeusuarioconfig">michael</p>
+                        <h2 class="text-xl">Configurações</h2>
+                        <div class="py-2 flex items-center gap-4">
+                            <label class="hover:cursor-pointer">Tema Escuro</label>
+                            <div class="w-16 h-8 relative rounded-xl cursor-pointer bg-purple-200" id="darkTheme">
+                                <div class="w-8 h-8 absolute rounded-full bg-pink-500" id="switchcontrolescuro"></div>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <label class="hover:cursor-pointer" for="font">Mudar Font</label>
+                            <input type="radio" id="font">
+                        </div>
+                        <a href="#atalhos"><button class="w-full mb-4 text-xl text-center bg-gray-300 dark:bg-gray-800">atalhos</button></a>
+                        <button class="w-full text-xl text-center bg-red-300 dark:bg-red-800" id="botaosair">Sair</button>
                     </div>
                 </div>
-            </section>
-            <article>
-                <div class="min-h-screen flex flex-col" id="mapa">
-                    <div class="w-full px-4 py-2 z-30 bg-gradient-to-r from-purple-500 to-blue-500 shadow-md">
-                        <div class="w-16 h-8 absolute z-50 mx-4 my-2 rounded-xl cursor-pointer bg-purple-200" id="abrirmenu">
-                            <div class="w-8 h-8 transition rounded-full absolute bg-pink-500" id="switchcontrol"></div>
-                        </div>
-                        <div class="pl-32 flex items-center justify-between">
-                            <div>
-                                <h2 class="text-xl text-white">Sketch</h2>
-                                <div class="flex flex-wrap">
-                                    <h2 class="pr-4 text-white">Ferramentas</h2>
-                                    <button class="px-4 bg-purple-200 hover:bg-purple-400" id="apagaTudo">Apagar Tudo</button>
-                                    <button class="px-4 bg-purple-200 hover:bg-purple-400" id="salvaimagem">Salvar Imagem</button>
-                                    <div>
-                                        <label id="myfile">
-                                            <p class="px-4 bg-purple-200 hover:bg-purple-400 cursor-pointer">importar</p>
-                                        </label>
-                                        <input class="hidden" type="file" id="meujson">
-                                    </div>
-                                    <button class="px-4 bg-purple-200 hover:bg-purple-400" id="bdjson">Baixar em Json</button>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <p class="text-white" id="nomeusuario">teste</p>
-                                <img class="w-12 h-12 bg-red-200 rounded-full" id="fotousuario" src="" alt="img-user">
-                            </div>
-                        </div>
+            </div>
+            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
+                <div class="flex">
+                    <div class="w-32">
+                        <a href="#menuconfig"><h2>Voltar</h2></a>
                     </div>
-                    <div class="flex grow">
-                        <header >
-                            <nav class="h-full bg-gray-100 dark:bg-gray-900">
-                                <div class="w-26 lg:w-32 h-full p-4 z-40 flex flex-col transition-all overflow-hidden" id="control">
-                                    <div class="grow">
-                                        <div class="w-10 h-10 lg:w-16 lg:h-16 mx-4 mb-4 lg:mb-8 cursor-pointer bg-pink-400" id="quadrado"></div>
-                                        <div class="w-10 h-10 lg:w-16 lg:h-16 mx-4 my-8 lg:my-8 rounded-full cursor-pointer bg-pink-400" id="circulo"></div>
-                                        <div class="flex justify-center">
-                                            <div id="triangulo"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <a href="#menuconfig"><button class="w-full text-xl text-center bg-purple-500">...</button></a>
-                                    </div>
-                                </div>
-                            </nav>
-                        </header>
-                        <section class="grow relative" id="controlright">
-                            <div class="w-full h-full flex items-center justify-center">
-                                <div class="w-full h-full overflow-x-auto overflow-y-auto relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-800 dark:text-white" id="map"></div>
-                            </div>
-                        </section>
-                        <div class="w-64 lg:w-96 p-8 z-50 border-box flex flex-col bg-gray-100 dark:bg-gray-900 dark:text-white" id="painelDireito">
-                            <div class="grow">
-                                <h2>Painel de Priedades</h2>
-                                <h3 class="lg:my-2 font-bold text-purple-500" id="elementoPainel">Elemento Selecionado</h3>
-                                <p id="X_properties">x</p>
-                                <p id="Y_properties">y</p>
-                                <p id="COLOR_properties">color</p>
-                            </div>
-                            <h2 class="text-xl">Dica</h2>
-                            <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
+                    <div>
+                        <h2 class="text-xl">Atalhos</h2>
+                        <div class="grid grid-cols-1 mt-4 md:grid-cols-2 gap-4 justify-center ">
+                            <span>Tecla: Q</span>
+                            <span>Selecionar Quadrado</span>
+                            <span>Tecla: C</span>
+                            <span>Selecionar Circulo</span>
+                            <span>Tecla: T</span>
+                            <span>Selecionar Triangulo</span>
                         </div>
                     </div>
                 </div>
-                <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="menuconfig">
-                    <div class="flex">
-                        <div class="w-32">
-                            <a href="#mapa"><h2>Voltar</h2></a>
-                        </div>
-                        <div>
-                            <div class="flex items-center justify-center">
-                                <img class="w-24 h-24 lg:w-32 lg:h-32 bg-red-200 rounded-full" id="fotousuarioconfig" src="" alt="img-user">
-                            </div>
-                            <p class="text-center text-xl mb-4" id="nomeusuarioconfig">michael</p>
-                            <h2 class="text-xl">Configurações</h2>
-                            <div class="py-2 flex items-center gap-4">
-                                <label class="hover:cursor-pointer">Tema Escuro</label>
-                                <div class="w-16 h-8 relative rounded-xl cursor-pointer bg-purple-200" id="darkTheme">
-                                    <div class="w-8 h-8 absolute rounded-full bg-pink-500" id="switchcontrolescuro"></div>
-                                </div>
-                            </div>
-                            <div class="py-2">
-                                <label class="hover:cursor-pointer" for="font">Mudar Font</label>
-                                <input type="radio" id="font">
-                            </div>
-                            <a href="#atalhos"><button class="w-full mb-4 text-xl text-center bg-gray-300 dark:bg-gray-800">atalhos</button></a>
-                            <button class="w-full text-xl text-center bg-red-300 dark:bg-red-800" id="botaosair">Sair</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
-                    <div class="flex">
-                        <div class="w-32">
-                            <a href="#menuconfig"><h2>Voltar</h2></a>
-                        </div>
-                        <div>
-                            <h2 class="text-xl">Atalhos</h2>
-                            <div class="grid grid-cols-1 mt-4 md:grid-cols-2 gap-4 justify-center ">
-                                <span>Tecla: Q</span>
-                                <span>Selecionar Quadrado</span>
-                                <span>Tecla: C</span>
-                                <span>Selecionar Circulo</span>
-                                <span>Tecla: T</span>
-                                <span>Selecionar Triangulo</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            </div>
         </article>
     </main>
     <script>

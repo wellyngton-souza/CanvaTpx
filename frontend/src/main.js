@@ -151,7 +151,7 @@ const puxarUsuario = () =>{
 }
 
 verificarTemaEscuro();
-verificarLogado();
+// verificarLogado();
 puxarUsuario();
 puxarJson();
 // exibirTempoReal();

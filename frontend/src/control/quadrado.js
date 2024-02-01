@@ -21,8 +21,8 @@ export const criaQuadrado = (x, y) =>{
     textBox.id = "Qi" + numQuadrado;
     textBox.placeholder = content;
 
-    let width = 300;
-    let height = 150;
+    let width = 240;
+    let height = 120;
     let color = "white";
 
     numQuadrado++;
@@ -49,7 +49,7 @@ export const criaQuadrado = (x, y) =>{
 
         cursor: move;
         padding: 10px;
-        border-top: 8px solid pink;
+        border-top: 8px solid #f472b6;
         /*
         border-top: 8px solid;
         border-image: linear-gradient(to right, #8a2be2, #FF1493);

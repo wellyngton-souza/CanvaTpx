@@ -3,7 +3,7 @@ import { mudarLargura } from "../styleObb/largura.js";
 import { mudarAltura } from "../styleObb/altura.js";
 import { mudarRotacao } from "../styleObb/rotacionar.js";
 
-let canvas = document.getElementById("map");
+let canvas = document.getElementById("controlright");
 let config = document.createElement('div');
 
 let object;

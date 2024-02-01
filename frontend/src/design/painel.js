@@ -4,7 +4,7 @@ import { updateDados } from "../../../backend/updateProject.js";
 
 let aberto = false;
 
-let canvas = document.getElementById("map");
+let canvas = document.getElementById("controlright");
 let painel = document.createElement('div');
 
 let elementoSelect = null;
@@ -27,7 +27,7 @@ export const criaPainel = () =>{
 export const abrirPainel = (e, x, y) =>{
     e.preventDefault();
 
-    if(e.target == canvas || e.target == painel) return;
+    if(e.target == document.getElementById("map") || e.target == painel) return;
 
     let color = "white";
 
