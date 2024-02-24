@@ -91,7 +91,7 @@ export const ImportQuadrado = (x, y, color, width, height, content, rotacionar) 
 
         cursor: move;
         padding: 10px;
-        border-top: 8px solid pink;
+        border-top: 8px solid #f472b6;
 
         /* box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75); */
         rotate: ${rotacionar}deg;

@@ -8,7 +8,6 @@ import { abrirPainel, fechaPainel, criaPainel } from "./design/painel.js";
 import { capturaImage } from "./images/captura.js";
 import { adicionarParticulas } from "./design/particulasMouse.js";
 import { verificarTemaEscuro, mudarTemaEscuro } from "./design/darkTheme.js";
-import { abrirmenu } from "./design/hiddenControl.js";
 import { puxarJson } from "../../backend/updateProject.js";
 import { sairApp } from "../../backend/logout.js";
 import { app } from "../../backend/firebaseConfig.js";
@@ -97,7 +96,6 @@ moverBloco(arrastando, segurando, control, map);
 document.getElementById("apagaTudo").addEventListener("click", apagarTudo);
 document.getElementById("bdjson").addEventListener("click", exportarJson);
 document.getElementById("salvaimagem").addEventListener("click", capturaImage);
-document.getElementById("abrirmenu").addEventListener("click", abrirmenu);
 document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
 document.getElementById("botaosair").addEventListener("click", sairApp);
 
