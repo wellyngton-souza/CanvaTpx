@@ -98,6 +98,8 @@ document.getElementById("bdjson").addEventListener("click", exportarJson);
 document.getElementById("salvaimagem").addEventListener("click", capturaImage);
 document.getElementById("darkTheme").addEventListener("click", mudarTemaEscuro);
 document.getElementById("botaosair").addEventListener("click", sairApp);
+document.getElementById("modifica").addEventListener("click", fechaPainel);
+document.getElementById("apagar").addEventListener("click", fechaPainel);
 
 document.addEventListener("keydown", (e) =>{
     let elementoAtivo = document.activeElement;
@@ -152,6 +154,7 @@ verificarTemaEscuro();
 verificarLogado();
 puxarUsuario();
 puxarJson();
+
 // exibirTempoReal();
 
 // document.addEventListener("mousemove", adicionarParticulas);
