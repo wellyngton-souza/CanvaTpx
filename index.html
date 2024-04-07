@@ -10,8 +10,13 @@
 </head>
 <body class="overflow-hidden">
     <main class="select-none">
-        <article>
-            <div class="min-h-screen flex flex-col" id="mapa">
+        <article id="loading">
+            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
+                <img class="w-32 animate-spin" src="./frontend/assets/SketchSemBackground.svg" alt="sketch icon">
+            </div>
+        </article>
+        <article class="hidden" id="app">
+            <div class="min-h-screen flex flex-col relative" id="mapa">
                 <section class="grow relative" id="controlright">
                     <div class="w-full h-full flex items-center justify-center">                        
                         <div class="w-full h-screen overflow-x-auto overflow-y-auto relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-800 dark:text-white" id="map"></div>
@@ -19,12 +24,12 @@
                 </section>
                 <div class="absolute m-8">
                     <div class="flex items-center gap-4">
-                        <h2 class="text-2xl">Sketch</h2>
-                        <p class="text-white" id="nomeusuario">teste</p>
+                        <h2 class="text-2xl dark:text-white">Sketch</h2>
+                        <p class="dark:text-white" id="nomeusuario">teste</p>
                         <img class="w-12 h-12 bg-red-200 rounded-full" id="fotousuario" src="" alt="img-user">
                     </div>
                 </div>
-                <a href="#menuconfig" class="w-8 h-8 absolute left-8 bottom-8 rounded-full text-center bg-gradient-to-r from-purple-500 to-blue-500">...</a>
+                <a href="#menuconfig" class="w-8 h-8 absolute right-8 top-8 md:left-8 md:bottom-8 md:top-auto rounded-full text-center bg-pink-500">...</a>
                 <div class="flex gap-8 absolute left-1/2 transform -translate-x-1/2 bottom-8" id="control">
                     <div class="p-2 text-center rounded-md cursor-pointer border-black border dark:text-white" id="quadrado">Quadrado</div>
                     <div class="p-2 text-center rounded-md cursor-pointer border-black border dark:text-white" id="circulo">Circulo</div>
