@@ -148,9 +148,6 @@ const puxarUsuario = () =>{
 
     document.getElementById("nomeusuarioconfig").textContent = user.nome;
     document.getElementById("fotousuarioconfig").src = user.foto;
-
-    document.getElementById("app").classList.toggle("hidden");
-    document.getElementById("loading").classList.toggle("hidden");
 }
 
 verificarTemaEscuro();

@@ -38,4 +38,8 @@ export const puxarJson = async () =>{
     //dados = busca.val();
 
     exibirTela(busca.val());
+
+    // desativar loading
+    document.getElementById("app").classList.toggle("hidden");
+    document.getElementById("loading").classList.toggle("hidden");
 }
