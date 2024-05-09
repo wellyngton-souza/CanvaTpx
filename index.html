@@ -6,20 +6,22 @@
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link rel="shortcut icon" href="./frontend/assets/Sketch White theme.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./frontend/assets/scroll/scroll.css">
+    <link rel="stylesheet" href="./frontend/assets/mobile/mobile.css">
     <title>Sketch</title>
 </head>
 <body class="overflow-hidden">
     <main class="select-none">
         <article id="loading">
-            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
+            <div class="screen-custom-height flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white">
                 <img class="w-32 animate-spin" src="./frontend/assets/SketchSemBackground.svg" alt="sketch icon">
             </div>
         </article>
         <article class="hidden" id="app">
-            <div class="min-h-screen flex flex-col relative" id="mapa">
+            <div class="screen-custom-height flex flex-col relative" id="mapa">
                 <section class="grow relative" id="controlright">
                     <div class="w-full h-full flex items-center justify-center">                        
-                        <div class="w-full h-screen overflow-x-auto overflow-y-auto relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-800 dark:text-white" id="map"></div>
+                        <div class="w-full screen-custom-height overflow-x-auto overflow-y-auto relative bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-800 dark:text-white" id="map"></div>
                     </div>
                 </section>
                 <div class="absolute m-8">
@@ -56,7 +58,7 @@
                     <p>Clique com o Direito no elemento, para abrir as suas configurações</p>
                 </div>
             </div>
-            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="menuconfig">
+            <div class="screen-custom-height flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="menuconfig">
                 <div class="flex">
                     <div class="w-32">
                         <a href="#"><h2>Voltar</h2></a>
@@ -73,16 +75,18 @@
                                 <div class="w-8 h-8 absolute rounded-full bg-pink-500" id="switchcontrolescuro"></div>
                             </div>
                         </div>
-                        <div class="py-2">
-                            <label class="hover:cursor-pointer" for="font">Mudar Font</label>
-                            <input type="radio" id="font">
-                        </div>
+                        <!--
+                            <div class="py-2">
+                                <label class="hover:cursor-pointer" for="font">Mudar Font</label>
+                                <input type="radio" id="font">
+                            </div>
+                        -->
                         <a href="#atalhos"><button class="w-full mb-4 text-xl text-center bg-gray-300 dark:bg-gray-800">atalhos</button></a>
                         <button class="w-full text-xl text-center bg-red-300 dark:bg-red-800" id="botaosair">Sair</button>
                     </div>
                 </div>
             </div>
-            <div class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
+            <div class="screen-custom-height flex items-center justify-center bg-white dark:bg-gray-900 dark:text-white" id="atalhos">
                 <div class="flex">
                     <div class="w-32">
                         <a href="#menuconfig"><h2>Voltar</h2></a>

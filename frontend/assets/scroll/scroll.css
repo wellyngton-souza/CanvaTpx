@@ -1,0 +1,10 @@
+/* Chrome */
+*::-webkit-scrollbar {
+    width: 0.1px; /* Largura da barra de rolagem */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: transparent transparent;   /* scroll thumb and track */
+} 
