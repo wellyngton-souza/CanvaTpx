@@ -87,16 +87,28 @@ export const moverBloco = ( arrastando, segurando ) =>{
         }
     });
 
-    document.addEventListener("mouseup", ()=>{
+    document.addEventListener("mouseup", (e)=>{
+        if(!arrastando){
+            return;
+        }
+
+        if(e.target.tagName == "TEXTAREA"){
+            return;
+        }
+
         arrastando = false;
+
         updateDados();
     });
 
     // Touch Mobile
-    document.addEventListener('touchstart', (e) => {
+    document.addEventListener("touchstart", (e) => {
         if(e.target.id[0] !== "Q" && e.target.id[0] !== "T" && e.target.id[0] !== "C"){
             return;
         }
+
+        document.getElementById("map").classList.remove("overflow-x-auto");
+        document.getElementById("map").classList.remove("overflow-y-auto");
 
         arrastando = true;
 
@@ -111,7 +123,7 @@ export const moverBloco = ( arrastando, segurando ) =>{
         Y = e.changedTouches[0].clientY - parseFloat(window.getComputedStyle(segurando).top);
     });
 
-    document.addEventListener('touchmove', (e) => {
+    document.addEventListener("touchmove", (e) => {
         if(!arrastando){
             return;
         }
@@ -119,7 +131,7 @@ export const moverBloco = ( arrastando, segurando ) =>{
         if(e.target.tagName == "TEXTAREA"){
             return;
         }
-        
+
         segurando.style.left = (e.changedTouches[0].clientX - X) + "px";
         segurando.style.top = (e.changedTouches[0].clientY - Y) + "px";
 
@@ -148,7 +160,18 @@ export const moverBloco = ( arrastando, segurando ) =>{
         }
     });
     
-    document.addEventListener('touchend', (e) => {
+    document.addEventListener("touchend", (e) => {
+        if(!arrastando){
+            return;
+        }
+
+        if(e.target.tagName == "TEXTAREA"){
+            return;
+        }
+
+        document.getElementById("map").classList.add("overflow-x-auto");
+        document.getElementById("map").classList.add("overflow-y-auto");
+
         arrastando = false;
         updateDados();
     });

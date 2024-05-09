@@ -5,6 +5,15 @@ import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/1
 import { ImportQuadrado, Importtriangulo, ImportCirculo } from "../frontend/src/import & export/loadFiles.js";
 
 export const updateDados = async () =>{
+    let isRefreshing = false;
+
+    // Evento para detectar se a página está sendo atualizada
+    window.addEventListener('beforeunload', () =>{
+        isRefreshing = true;
+    });
+
+    if (isRefreshing) return;
+
     const db = getDatabase(app);
     const user = JSON.parse(localStorage.getItem("logado"));
 
