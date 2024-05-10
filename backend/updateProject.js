@@ -25,16 +25,22 @@ export const updateDados = async () =>{
 const exibirTela = (dadosLocal) =>{
     limparTudo();
 
-    for (let i = 0; i < dadosLocal?.quadrado?.length; i++) {
-        ImportQuadrado(dadosLocal.quadrado[i][1], dadosLocal.quadrado[i][2], dadosLocal.quadrado[i][3], dadosLocal.quadrado[i][4], dadosLocal.quadrado[i][5], dadosLocal.quadrado[i][6], dadosLocal.quadrado[i][7]);
+    if(dadosLocal?.quadrado){
+        for (let i = 0; i < dadosLocal?.quadrado?.length; i++) {
+            ImportQuadrado(dadosLocal.quadrado[i][1], dadosLocal.quadrado[i][2], dadosLocal.quadrado[i][3], dadosLocal.quadrado[i][4], dadosLocal.quadrado[i][5], dadosLocal.quadrado[i][6], dadosLocal.quadrado[i][7]);
+        }
     }
 
-    for (let i = 0; i < dadosLocal?.circulo?.length; i++) {
-        ImportCirculo(dadosLocal.circulo[i][1], dadosLocal.circulo[i][2], dadosLocal.circulo[i][3], dadosLocal.circulo[i][4], dadosLocal.circulo[i][5]);
+    if(dadosLocal?.circulo){
+        for (let i = 0; i < dadosLocal?.circulo?.length; i++) {
+            ImportCirculo(dadosLocal.circulo[i][1], dadosLocal.circulo[i][2], dadosLocal.circulo[i][3], dadosLocal.circulo[i][4], dadosLocal.circulo[i][5]);
+        }
     }
 
-    for (let i = 0; i < dadosLocal?.triangulo?.length; i++) {
-        Importtriangulo(dadosLocal.triangulo[i][1], dadosLocal.triangulo[i][2], dadosLocal.triangulo[i][3], dadosLocal.triangulo[i][4], dadosLocal.triangulo[i][5], dadosLocal.quadrado[i][7]);
+    if(dadosLocal?.triangulo){
+        for (let i = 0; i < dadosLocal?.triangulo?.length; i++) {
+            Importtriangulo(dadosLocal.triangulo[i][1], dadosLocal.triangulo[i][2], dadosLocal.triangulo[i][3], dadosLocal.triangulo[i][4], dadosLocal.triangulo[i][5]);
+        }
     }
 }
 
